@@ -11,8 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d("1", "ejemplo sincronizar");
-
+        Log.d("1", "ejemlplo sincronizar");
 
     }
 }
