@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("1", "ejemlplo sincronizar");
 
-        Log.d("1", "ejemlplo sincronizar Rubi");
+        Log.d("1", "ejemlplo sincronizar Rubiiii");
 
     }
 }
