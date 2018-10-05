@@ -15,5 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("1", "ejemlplo sincronizar Rubiiii");
 
+        Log.d("1", "ejemlplo sincronizar final");
+
     }
 }
