@@ -29,7 +29,8 @@
             android:text="Seguimos innovando para que usted siga ahorrando más dinero"
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
-            android:textColor="@color/colorAccent" />
+
+            />
 
         <TextView
             android:id="@+id/textView3"
