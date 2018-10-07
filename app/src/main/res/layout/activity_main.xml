@@ -25,10 +25,10 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/lilita_one"
             android:text="Seguimos innovando para que usted siga ahorrando más dinero"
             android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+            android:textColor="#88230B"
 
             />
 
@@ -42,7 +42,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Haz tus compras en línea, mira las nuevos artículos. ¡Hay ofertas los 3635 días del año !" />
+            android:text="Haz tus compras en línea, mira las nuevos artículos. ¡Hay ofertas los 365 días del año !" />
 
         <TextView
             android:id="@+id/textView2"
