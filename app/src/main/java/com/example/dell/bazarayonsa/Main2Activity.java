@@ -21,9 +21,10 @@ public class Main2Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Bazar AYONSA"); //Mandar logotipo
+        toolbar.setTitle(""); //Mandar logotipo
+        toolbar.setLogo(R.mipmap.logo_aceptado);
         setSupportActionBar(toolbar);
-        toolbar.setSubtitle("¡Bienvenido!");
+        //toolbar.setSubtitle("¡Bienvenido!");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
