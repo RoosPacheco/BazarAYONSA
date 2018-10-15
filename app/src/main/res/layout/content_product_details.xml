@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ProductDetails"
+    android:background="#FFFFFF"
+    tools:showIn="@layout/content_product_details">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buy">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/productimage1"
+            android:layout_width="match_parent"
+            android:background="#FFFFFF"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            android:visibility="visible"/>
+
+
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/images1"
+        android:layout_width="80dp"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_height="80dp" />
+
+        <ImageButton
+            android:id="@+id/images2"
+            android:layout_width="80dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:layout_height="80dp" />
+
+        <ImageButton
+            android:id="@+id/images3"
+            android:layout_width="80dp"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="10dp"
+            android:layout_height="80dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+    <TextView
+        android:id="@+id/producttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fossil Mens Wtach"
+        android:textColor="#464646"
+        android:textSize="14sp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="left" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/productprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$220"
+            android:textColor="#464646"
+            android:layout_gravity="right"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/productgender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fossil Mens Wtach"
+            android:textColor="#464646"
+            android:textSize="12sp"
+            android:layout_gravity="left"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"/>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/productsave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save 44%"
+            android:textColor="#ff4545"
+            android:layout_gravity="right"
+            android:textSize="12sp"
+            android:paddingRight="10dp"/>
+
+    </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/productdescrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fossil Mens Wtach"
+                android:textColor="#737373"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#303292"
+        android:text="COMPRAR AHORA"/>
+
+</RelativeLayout>

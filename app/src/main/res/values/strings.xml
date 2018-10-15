@@ -7,4 +7,123 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="products_titles">
+        <item>Fastrack NG3121SM02</item>
+        <item>Fastrack 6109SM03</item>
+        <item>Titan Raga</item>
+        <item>Ba Ayah Lai Ba Bako Tido  </item>
+        <item>Adaik Salingka Nagari </item>
+        <item>Aia Mato Papisahan </item>
+        <item>Arok Dirantau Urang </item>
+        <item>Ba Ayah Lai Ba Bako Tido  </item>
+
+    </string-array>
+
+
+    <string-array name="products_image">
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/q/t/h/ng3121sm02-fastrack-original-imaeznczgkmshfqh.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/v/w/s/6109sm03-fastrack-original-imaegtr5yqrguchu.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/x/4/a/9710ym01-titan-original-imadnbyrrg44fech.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+
+    </string-array>
+
+
+    <string-array name="products_price">
+        <item>$220</item>
+        <item>$120</item>
+        <item>$360</item>
+        <item>$420</item>
+        <item>$500</item>
+        <item>$410</item>
+        <item>$270</item>
+        <item>$320</item>
+
+    </string-array>
+
+
+    <string-array name="products_price_save">
+        <item>Save 44%</item>
+        <item>Save 18%</item>
+        <item>Save 22%</item>
+        <item>Save 41%</item>
+        <item>Save 28%</item>
+        <item>Save 15%</item>
+        <item>Save 12%</item>
+        <item>Save 16%</item>
+
+    </string-array>
+
+
+    <string-array name="products_image1">
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/q/t/h/ng3121sm02-fastrack-original-imaeznczgkmshfqh.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/v/w/s/6109sm03-fastrack-original-imaegtr5yqrguchu.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/x/4/a/9710ym01-titan-original-imadnbyrrg44fech.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+
+    </string-array>
+
+
+    <string-array name="products_image2">
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/q/t/h/ng3121sm02-fastrack-original-imaeznd5gzw5dgdy.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/v/w/s/6109sm03-fastrack-original-imaegtr5a7mc49ay.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/x/4/a/9710ym01-titan-original-imadnbysf9habbgk.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/jlcmavk0/watch/g/y/r/lcs-8075-lois-caron-original-imaf8hy2qskxxaph.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/jlcmavk0/watch/g/y/r/lcs-8075-lois-caron-original-imaf8hy2qskxxaph.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/jlcmavk0/watch/g/y/r/lcs-8075-lois-caron-original-imaf8hy2qskxxaph.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/jlcmavk0/watch/g/y/r/lcs-8075-lois-caron-original-imaf8hy2qskxxaph.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/jlcmavk0/watch/g/y/r/lcs-8075-lois-caron-original-imaf8hy2qskxxaph.jpeg</item>
+
+    </string-array>
+
+
+    <string-array name="products_image3">
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/q/t/h/ng3121sm02-fastrack-original-imaezncz9em2whx4.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/v/w/s/6109sm03-fastrack-original-imaegtr5gjwzkq9g.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/watch/x/4/a/9710ym01-titan-original-imadnbysftze8gd9.jpeg?q=70</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+        <item>https://rukminim1.flixcart.com/image/832/832/ji95yfk0/watch/f/v/3/mg-2467-omega-original-imaf63ahjyhpafbn.jpeg</item>
+
+    </string-array>
+
+
+    <string-array name="gender">
+        <item>Watches for men</item>
+        <item>Watches for women</item>
+        <item>Watches for women</item>
+        <item>Watches for men</item>
+        <item>Watches for women</item>
+        <item>Watches for women</item>
+        <item>Watches for men</item>
+        <item>Watches for men</item>
+
+    </string-array>
+
+
+    <string-array name="description">
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
