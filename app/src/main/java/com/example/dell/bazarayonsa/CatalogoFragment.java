@@ -114,7 +114,7 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
         productgender= getResources().getStringArray(R.array.gender);
         productdesc= getResources().getStringArray(R.array.description);
 
-        listView=(GridView)getView().findViewById(R.id.listview);
+        listView = (GridView)getView().findViewById(R.id.listview);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -123,8 +123,8 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
                 Toast.makeText(getContext(),"Item",Toast.LENGTH_SHORT).show();
 
 
-                Intent intent = new Intent(getActivity(),ProductDetails.class);
-                /*intent.putExtra("producttitle",product_title);
+                Intent intent = new Intent(getActivity(), ProductDetails.class);
+                intent.putExtra("producttitle",product_title);
                 intent.putExtra("productimage",product_image);
                 intent.putExtra("position",position);
                 intent.putExtra("productprice",product_price);
@@ -134,17 +134,17 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
                 intent.putExtra("productimage2",productimage2);
                 intent.putExtra("productimage3",productimage3);
                 intent.putExtra("productgender",productgender);
-                intent.putExtra("productdesc",productdesc);*/
+                intent.putExtra("productdesc",productdesc);
 
 
-                String url = intent.getExtras().getString("userurl");
-                intent.putExtra("userurl", url);
+                /*producttitleString url = intent.getExtras().getString("userurl");
+                intent.putExtra("userurl", url);*/
 
-                Toast.makeText(getActivity(),"Item",Toast.LENGTH_SHORT).show();
+
 
 
                 try{
-                    //startActivity(intent);
+                    startActivity(intent);
                 }
                 catch (Exception e){
                     e.printStackTrace();

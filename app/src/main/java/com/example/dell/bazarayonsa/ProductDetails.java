@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.app.ActionBar;
 
 import com.squareup.picasso.Picasso;
 
@@ -24,26 +25,13 @@ public class ProductDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_product_details);
+        setContentView(R.layout.activity_product_details);
 
-
-        ImageView cart =(ImageView)findViewById(R.id.cart);
-        cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Toast.makeText(getApplicationContext(),"Cart",Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        Toast.makeText(getApplicationContext(),"Item",Toast.LENGTH_SHORT).show();
-
-        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         ImageView cart =(ImageView)findViewById(R.id.cart);
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,12 +42,13 @@ public class ProductDetails extends AppCompatActivity {
             }
         });
 
+
         Intent i =getIntent();
-        position=i.getExtras().getInt("position");
+        position =i.getExtras().getInt("position");
         product_title=i.getStringArrayExtra("producttitle");
         product_image=i.getStringArrayExtra("productimage");
         product_price=i.getStringArrayExtra("productprice");
-        product_save=i.getStringArrayExtra("wproductsave");
+        product_save=i.getStringArrayExtra("productsave");
 
         product_image1=i.getStringArrayExtra("productimage1");
         product_image2=i.getStringArrayExtra("productimage2");
@@ -147,7 +136,7 @@ public class ProductDetails extends AppCompatActivity {
         });
 
 
-        */
+
 
     }
 
