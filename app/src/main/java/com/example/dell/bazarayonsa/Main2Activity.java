@@ -37,7 +37,7 @@ public class Main2Activity extends AppCompatActivity
         setContentView(R.layout.activity_main2);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(""); //Mandar logotipo
+        //toolbar.setTitle(""); //Mandar logotipo
         setSupportActionBar(toolbar);
 
         //SEARCH
