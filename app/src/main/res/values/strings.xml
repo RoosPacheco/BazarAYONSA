@@ -8,6 +8,27 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+
+    <string name="hello_world">Hello world!</string>
+    <string name="email">Correo electrónico</string>
+    <string name="passowrd">Contraseña</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="show_pwd">Ver contraseña</string>
+    <string name="hide_pwd">Ocultar contraseña</string>
+    <string name="forgot">¿Olvidaste tu contraseña?</string>
+    <string name="closebutton">Close Button for Activity</string>
+    <string name="newUser">¿No eres miembro todavía? Registrate aquí</string>
+    <string name="fullName">Nombre completo</string>
+    <string name="mobileNumber">Número de celular</string>
+    <string name="location">Localización</string>
+    <string name="confirmPassword">Confirmar contraseña</string>
+    <string name="terms_conditions">Al hacer clic en Registrarse, usted acepta todos los Términos y Condiciones.</string>
+    <string name="signUp">REGÍSTRATE</string>
+    <string name="already_user">¿Ya tienes cuenta? Entre aquí.</string>
+    <string name="registered_emailid">Por favor ingrese su correo electrónico registrado a continuación:</string>
+    <string name="submit">Enviar</string>
+    <string name="back">Regresar</string>
+
     <string-array name="products_titles">
         <item>Fastrack NG3121SM02</item>
         <item>Fastrack 6109SM03</item>
@@ -126,4 +147,17 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>
