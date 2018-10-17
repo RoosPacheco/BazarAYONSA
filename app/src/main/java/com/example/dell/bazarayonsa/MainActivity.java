@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import static com.example.dell.bazarayonsa.Utils.SignUp_Fragment;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
     }
 }
