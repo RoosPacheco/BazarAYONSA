@@ -37,48 +37,55 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bazar AYONSA más cerca de ti:" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Bazar AYONSA más cerca de ti:"
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Haz tus compras en línea, mira las nuevos artículos. ¡Hay ofertas los 365 días del año!" />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Haz tus compras en línea y mira las nuevos artículos. ¡Hay ofertas los 365 días del año!"
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¡Ingresa ahora!" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lilita_one"
-            android:text="Seguimos innovando para que usted siga ahorrando más dinero"
-            android:textAlignment="center"
-            android:textColor="#88230B"
-
-            />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="¡Ingresa ahora!"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="¿Ya eres cliente? Inicia sesión"
-            />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¿Eres nuevo? ¡Regístrate!" />
+            android:text="¿Eres nuevo? ¡Regístrate!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <Button
             android:id="@+id/omitir_sesion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Omitir inicio de sesión" />
+            android:text="Omitir inicio de sesión"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

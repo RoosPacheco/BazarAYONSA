@@ -38,15 +38,60 @@
 
         </android.support.v7.widget.Toolbar>
 
+        <SearchView
+            style="@android:style/Widget.Material.Light.SearchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f38120"
+            android:contentDescription="¿Qué buscas?">
+
+        </SearchView>
+
     </android.support.design.widget.AppBarLayout>
 
     <!--<include layout="@layout/content_main2" />-->
+
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Inicia sesión y consigue más promociones"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar sesión" />
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Crear cuenta"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
 
     </FrameLayout>
 
