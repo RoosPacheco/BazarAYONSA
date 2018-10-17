@@ -1,8 +1,12 @@
 package com.example.dell.bazarayonsa;
 
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -16,18 +20,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnFragmentInteractionListener {
 
+    @SuppressLint("ResourceAsColor")
+    @TargetApi(Build.VERSION_CODES.P)
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(""); //Mandar logotipo
         setSupportActionBar(toolbar);
+
+        //SEARCH
+        SearchView searchView=findViewById(R.id.searchView);
+         searchView.setIconified(false);
+        searchView.setIconifiedByDefault(false);
+        /* Code for changing the textcolor and hint color for the search view */
+        searchView.setQueryHint("¿Qué buscas?");
+        int id =searchView.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
+        TextView textView= (TextView) searchView.findViewById(id);
+        textView.setTextColor(R.color.white);
+        //searchView.setBackgroundColor(R.color.white);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -44,6 +67,8 @@ public class Main2Activity extends AppCompatActivity
         fragmentManager.beginTransaction()
                 .replace(R.id.content, fragment)
                 .commit();
+
+
     }
 
     @Override
@@ -92,16 +117,28 @@ public class Main2Activity extends AppCompatActivity
 
             fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_home) {
             fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_catalogo) {
             fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_promociones) {
             fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_pedidos) {
+            fragment = new CatalogoFragment();
+
+        } else if (id == R.id.nav_regalos) {
+            fragment = new CatalogoFragment();
+
+        } else if (id == R.id.nav_cuenta) {
+            fragment = new CatalogoFragment();
+
+        } else if (id == R.id.nav_configuracion) {
+            fragment = new CatalogoFragment();
+
+        } else if (id == R.id.nav_serviciocliente) {
             fragment = new CatalogoFragment();
         }
 

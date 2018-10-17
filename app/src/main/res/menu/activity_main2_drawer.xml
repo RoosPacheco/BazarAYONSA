@@ -7,32 +7,39 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Home" />
+            android:title="Inicio" />
         <item
             android:id="@+id/nav_catalogo"
             android:icon="@drawable/ic_apps_black_24dp"
             android:title="Comprar por Departamentos" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:id="@+id/nav_promociones"
+            android:icon="@mipmap/ic_launch_money"
             android:title="Promociones" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Mis pedidos" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
+    <group android:checkableBehavior="single">
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:id="@+id/nav_pedidos"
+                android:icon="@mipmap/ic_launch_tarjeta"
+                android:title="Mis pedidos" />
+        <item
+            android:id="@+id/nav_regalos"
+            android:icon="@mipmap/ic_launch_regalo"
+            android:title="Para regalar" />
+        <item
+            android:id="@+id/nav_cuenta"
+            android:icon="@mipmap/ic_launch_persona"
+            android:title="Mi cuenta" />
+
+            <item
+                android:id="@+id/nav_configuracion"
+                android:icon="@drawable/ic_menu_manage"
                 android:title="Configuración" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+                android:id="@+id/nav_serviciocliente"
+                android:icon="@mipmap/ic_launch_telefono"
+                android:title="Servicio de atención al cliente" />
+        </group>
 
 </menu>
