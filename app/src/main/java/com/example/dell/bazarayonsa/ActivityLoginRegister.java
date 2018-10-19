@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class ActivityLoginRegister extends AppCompatActivity {
 
@@ -17,13 +18,27 @@ public class ActivityLoginRegister extends AppCompatActivity {
         setContentView(R.layout.activity_login_register);
         fragmentManager = getSupportFragmentManager();
 
+        Bundle bundle = getIntent().getExtras();
+        String operacion = (String) bundle.get("operación");
+
         // If savedinstnacestate is null then replace login fragment
-        if (savedInstanceState == null) {
+        if (operacion.equals("login")) {
+            if (savedInstanceState == null) {
+                fragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frameContainer, new Login_Fragment(),
+                                Utils.Login_Fragment).commit();
+            }
+        }
+
+        else if (operacion.equals("crearUser")) {
             fragmentManager
                     .beginTransaction()
-                    .replace(R.id.frameContainer, new Login_Fragment(),
-                            Utils.Login_Fragment).commit();
+                    .replace(R.id.frameContainer, new SignUp_Fragment(),
+                            Utils.SignUp_Fragment).commit();
         }
+
+
 
         // On close icon click finish activity
         findViewById(R.id.close_activity).setOnClickListener(
