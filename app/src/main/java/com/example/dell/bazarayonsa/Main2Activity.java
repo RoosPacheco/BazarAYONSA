@@ -3,6 +3,7 @@ package com.example.dell.bazarayonsa;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,12 +39,12 @@ public class Main2Activity extends AppCompatActivity
         setContentView(R.layout.activity_main2);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //toolbar.setTitle(""); //Mandar logotipo
+        toolbar.setTitle(""); //Mandar logotipo
         setSupportActionBar(toolbar);
 
         //SEARCH
         SearchView searchView=findViewById(R.id.searchView);
-         searchView.setIconified(false);
+        searchView.setIconified(false);
         searchView.setIconifiedByDefault(false);
         /* Code for changing the textcolor and hint color for the search view */
         searchView.setQueryHint("¿Qué buscas?");
@@ -51,6 +53,15 @@ public class Main2Activity extends AppCompatActivity
         textView.setTextColor(R.color.white);
         //searchView.setBackgroundColor(R.color.white);
 
+        //Mostrar promociones
+        ImageView imageView2= (ImageView) findViewById(R.id.imageView2);
+        imageView2.setImageResource(R.drawable.home_octmuebles);
+        ImageView imageView3= (ImageView) findViewById(R.id.imageView3);
+        imageView3.setImageResource(R.drawable.home_lavadora);
+        ImageView imageView4= (ImageView) findViewById(R.id.imageView4);
+        imageView4.setImageResource(R.drawable.home_pantalla);
+        ImageView imageView5= (ImageView) findViewById(R.id.imageView5);
+        imageView5.setImageResource(R.drawable.home_calefactor);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -67,8 +78,6 @@ public class Main2Activity extends AppCompatActivity
         fragmentManager.beginTransaction()
                 .replace(R.id.content, fragment)
                 .commit();
-
-
     }
 
     @Override
