@@ -41,13 +41,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dell.bazarayonsa.Main2Activity" />
         </activity>
-
         <activity
-            android:name="ActivityLoginRegister"
-            android:label="@string/app_name" >
-
-        </activity>
-
+            android:name=".ActivityLoginRegister"
+            android:label="@string/app_name"></activity>
+        <activity android:name=".ServicioCliente"></activity>
     </application>
 
 </manifest>

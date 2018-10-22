@@ -2,6 +2,7 @@ package com.example.dell.bazarayonsa;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.content.ClipData;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -148,9 +149,10 @@ public class Main2Activity extends AppCompatActivity
             fragment = new CatalogoFragment();
 
         } else if (id == R.id.nav_serviciocliente) {
-            fragment = new CatalogoFragment();
+            //fragment = new CatalogoFragment();
+            Intent intent = new Intent(getApplicationContext(), ServicioCliente.class);
+            startActivity(intent);
         }
-
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
