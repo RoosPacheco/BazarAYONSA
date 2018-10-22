@@ -14,7 +14,7 @@
         android:layout_height="180dp"
         android:gravity="center"
         android:scaleType="centerInside"
-        android:src="@drawable/product" />
+        android:src="@drawable/cocina_montreal_estilo_transicional_color_tabaco" />
 
 
     <TextView
@@ -22,10 +22,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Omega mg_2467"
+        android:text="Muebles"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:textColor="#464646"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:maxLines="1"/>
 
     <LinearLayout
@@ -39,17 +40,27 @@
         android:id="@+id/product_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$220"
+        android:text="De: $10,999"
         android:layout_marginRight="20dp"
         android:textColor="#464646"
         android:textSize="14sp"
         android:maxLines="1"/>
 
         <TextView
+            android:id="@+id/product_price_oferta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A: $8,730 MNX"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:textColor="#ff4545"
+            android:textSize="14sp"
+            android:maxLines="1"/>
+        <TextView
             android:id="@+id/product_price_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save 44%"
+            android:text="21% de Desc."
             android:textColor="#ff4545"
             android:textSize="14sp"
             android:maxLines="1"/>

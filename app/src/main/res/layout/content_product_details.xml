@@ -31,9 +31,6 @@
             android:layout_height="200dp"
             android:layout_marginTop="15dp"
             android:visibility="visible"/>
-
-
-
     </FrameLayout>
 
 
@@ -90,7 +87,7 @@
             android:id="@+id/productprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$220"
+            android:text="De: $10,999"
             android:textColor="#464646"
             android:layout_gravity="right"
             android:textSize="14sp"
@@ -117,10 +114,11 @@
 
         <TextView
             android:layout_alignParentRight="true"
-            android:id="@+id/productsave"
+            android:id="@+id/productpriceoferta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save 44%"
+            android:text="A:8,730 MNX"
+            android:textStyle="bold"
             android:textColor="#ff4545"
             android:layout_gravity="right"
             android:textSize="12sp"
@@ -141,6 +139,16 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="5dp"/>
 
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/productsave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="44% de Desc."
+                android:textColor="#ff4545"
+                android:layout_gravity="right"
+                android:textSize="12sp"
+                android:paddingRight="10dp"/>
         </LinearLayout>
     </ScrollView>
 
@@ -149,7 +157,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:background="#303292"
+        android:background="@color/background_color"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:text="COMPRAR AHORA"/>
 
 </RelativeLayout>

@@ -20,7 +20,7 @@
         android:background="#d7d7d7"
         android:verticalSpacing="2dp"
         android:horizontalSpacing="2dp"
-        android:numColumns="2"
+        android:numColumns="1"
         android:stretchMode="columnWidth"
         android:layout_marginBottom="3dp">
 

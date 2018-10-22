@@ -49,7 +49,7 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
     ListAdapter adapter;
 
     public String judul, src_asset, mp3;
-    String[] product_title,product_image,product_price,product_save;
+    String[] product_title,product_image,product_price,product_price_oferta,product_save;
     String[] productimage1,productimage2,productimage3,productgender,productdesc;
 
 
@@ -105,6 +105,7 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
         //LIST START
         product_title = getResources().getStringArray(R.array.products_titles);
         product_price = getResources().getStringArray(R.array.products_price);
+        //product_price_oferta = getResources().getStringArray(R.array.products_price);
         product_image = getResources().getStringArray(R.array.products_image);
         product_save = getResources().getStringArray(R.array.products_price_save);
 
@@ -128,6 +129,7 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
                 intent.putExtra("productimage",product_image);
                 intent.putExtra("position",position);
                 intent.putExtra("productprice",product_price);
+                //intent.putExtra("productpriceoferta",product_price_oferta);
                 intent.putExtra("productsave",product_save);
 
                 intent.putExtra("productimage1",productimage1);
@@ -240,6 +242,7 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
 
             producttitle = (TextView) itemView.findViewById(R.id.product_title);
             productprice = (TextView) itemView.findViewById(R.id.product_price);
+            //productpriceoferta=(TextView) itemView.findViewById(R.id.product_price_oferta);
             productsave = (TextView) itemView.findViewById(R.id.product_price_save);
             productimage = (ImageView) itemView.findViewById(R.id.product_images);
             Picasso.with(context)

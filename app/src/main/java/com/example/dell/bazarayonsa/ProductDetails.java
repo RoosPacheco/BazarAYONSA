@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 
 
 public class ProductDetails extends AppCompatActivity {
-    String[] product_title,product_image,product_price,product_save,product_image1,product_image2,product_image3,product_gender,product_desc;
+    String[] product_title,product_image,product_price,product_price_ofera,product_save,product_image1,product_image2,product_image3,product_gender,product_desc;
     int position;
     String getimage1,getimage2,getimage3;
 
@@ -48,6 +48,7 @@ public class ProductDetails extends AppCompatActivity {
         product_title=i.getStringArrayExtra("producttitle");
         product_image=i.getStringArrayExtra("productimage");
         product_price=i.getStringArrayExtra("productprice");
+        product_price_ofera=i.getStringArrayExtra("productopriceoferta");
         product_save=i.getStringArrayExtra("productsave");
 
         product_image1=i.getStringArrayExtra("productimage1");
@@ -62,6 +63,8 @@ public class ProductDetails extends AppCompatActivity {
         productprice=(TextView)findViewById(R.id.productprice);
         productprice.setText(product_price[position]);
 
+        productprice=(TextView)findViewById(R.id.productpriceoferta);
+        productprice.setText(product_price[position]);
 
         productsave=(TextView)findViewById(R.id.productsave);
         productsave.setText(product_save[position]);
