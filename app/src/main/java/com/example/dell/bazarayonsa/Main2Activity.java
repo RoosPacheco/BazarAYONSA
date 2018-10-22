@@ -143,13 +143,14 @@ public class Main2Activity extends AppCompatActivity
             fragment = new CatalogoFragment();
 
         } else if (id == R.id.nav_cuenta) {
-            fragment = new CatalogoFragment();
+            Intent intent = new Intent(getApplicationContext(), MiCuenta.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_configuracion) {
-            fragment = new CatalogoFragment();
+            Intent intent = new Intent(getApplicationContext(), Configuracion.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_serviciocliente) {
-            //fragment = new CatalogoFragment();
             Intent intent = new Intent(getApplicationContext(), ServicioCliente.class);
             startActivity(intent);
         }

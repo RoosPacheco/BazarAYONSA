@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Bazar AYONSA"
+                android:text="Bazar Ayonsa"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -44,7 +44,7 @@
     <!--<include layout="@layout/content_main2" />-->
 
     <FrameLayout
-        android:id="@+id/content1"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -61,122 +61,122 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/textView10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Servicio  de atención al cliente"
-                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:text="Mi cuenta" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/textView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Bazar AYONSA es una empresa comprometida con brindarle el mejor servicio, ¡contáctanos ahora!"
-                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:textStyle="normal" />
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="25dp"
+                    android:text="Pedidos" />
 
                 <Button
-                    android:id="@+id/button4"
-                    style="@style/Widget.AppCompat.Button"
+                    android:id="@+id/button11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@color/background_color"
-                    android:text="Contáctanos"
+                    android:background="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:text="Mis pedidos" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Soluciones"
                     android:textColor="@color/black"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="25dp"
+                    android:text="Notificaciones" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/button12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/white"
-                    android:text="Cuenta"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:text="Buzón de mensajes" />
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/button13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/white"
-                    android:text="Aplicación"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:text="Acerca de Bazar AYONSA app" />
 
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="25dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:text="Configuración de mi cuenta" />
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/button14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/white"
-                    android:text="Envíos y entregas"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:text="Inicio de sesión" />
                 <Button
-                    android:id="@+id/button8"
+                    android:id="@+id/button15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/white"
-                    android:text="Pedidos"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:text="Opciones de pago" />
                 <Button
-                    android:id="@+id/button9"
+                    android:id="@+id/button16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/white"
-                    android:text="Pagos y promociones"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:text="Tarjetas de regalo" />
                 <Button
-                    android:id="@+id/button10"
+                    android:id="@+id/button17"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Direcciones"
                     android:layout_marginStart="50dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/white"
-                    android:text="Devoluciones y reembolsos"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
             </LinearLayout>
         </ScrollView>
