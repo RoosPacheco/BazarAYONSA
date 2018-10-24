@@ -2,13 +2,27 @@ package com.example.dell.bazarayonsa;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -20,6 +34,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+    String ip = "10.74.16.147";
+
+    ListView listView;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -79,8 +96,16 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        listView = (ListView)view.findViewById(R.id.lista);
+        new CargarPromociones().execute();
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -105,6 +130,78 @@ public class HomeFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    class CargarPromociones extends AsyncTask<Void, Void, List> {
+
+        @Override
+        protected List doInBackground(Void... voids) {
+            HttpURLConnection connection;
+
+            //example.php es el php que envia el arreglo json
+            String direccion = "http://"+ip+"/BazarAyonsa/promociones/example.php";
+
+            List<String> list = new ArrayList<String>();
+
+            try {
+                connection = (HttpURLConnection) new URL(direccion).openConnection();
+                connection.setRequestMethod("POST");
+                connection.setDoInput(true);
+
+                connection.connect();
+                InputStream is = (InputStream) connection.getContent();
+                byte [] b = new byte[100000];//buffer
+                Integer numBytes = is.read(b);// numero de bites que leyó
+                //convertimos ese num de bites a una cadena
+                String res = new String(b, 0,  numBytes, "utf-8");
+                Log.d("1", res);
+
+                //"res" contiene la cadena json(que es un array ) de los nombres de la simagenes
+                JSONArray arr = new JSONArray(res);
+
+                for(int i = 0; i < arr.length(); i++){
+                    list.add("http://"+ip+"/BazarAyonsa/promociones/"+arr.getString(i));
+                    Log.d("IMAGENES"+i, arr.getString(i));
+                }
+
+
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return list;
+        }
+
+        @Override
+        protected void onPostExecute(List list) {
+            super.onPostExecute(list);
+
+            /*
+             * Esto es para cagar el arreglo al list view
+             * */
+            //ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, list);
+            //
+
+
+            ArrayList<String> imageURLArray = new ArrayList<String>(list);
+
+            for(String s : imageURLArray)
+                Log.d("ooo", s);
+
+
+
+            ListAdapter imageAdapter = new ListAdapter(getContext(), imageURLArray );
+            listView.setAdapter(imageAdapter);
+
+
+
+
+
+
+        }
     }
 
 

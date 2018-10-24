@@ -55,7 +55,7 @@ public class Main2Activity extends AppCompatActivity
         //searchView.setBackgroundColor(R.color.white);
 
         //Mostrar promociones
-        ImageView imageView2= (ImageView) findViewById(R.id.imageView2);
+        /*ImageView imageView2= (ImageView) findViewById(R.id.imageView2);
         imageView2.setImageResource(R.drawable.home_octmuebles);
         ImageView imageView3= (ImageView) findViewById(R.id.imageView3);
         imageView3.setImageResource(R.drawable.home_lavadora);
@@ -63,7 +63,7 @@ public class Main2Activity extends AppCompatActivity
         imageView4.setImageResource(R.drawable.home_pantalla);
         ImageView imageView5= (ImageView) findViewById(R.id.imageView5);
         imageView5.setImageResource(R.drawable.home_calefactor);
-
+*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
