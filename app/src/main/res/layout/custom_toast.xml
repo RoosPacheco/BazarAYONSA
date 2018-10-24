@@ -11,11 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:drawableLeft="@mipmap/error"
+        android:drawableLeft="@drawable/ic_warning_black_24dp"
         android:drawablePadding="10dp"
         android:gravity="center_vertical"
         android:padding="5dp"
-        android:textColor="#c0392b"
+        android:textColor="#FF0000"
         android:textSize="15sp" />
 
 </RelativeLayout>

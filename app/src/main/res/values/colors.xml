@@ -2,11 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#2e3090</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff4081</color>
 
     <color name="background_color">#f3801e</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="white_greyish">#eeeeee</color>
-    <color name="button_selectorcolor">#9e9e9e</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
+    <color name="colorMarronLogo">#7a2015</color>
 </resources>
