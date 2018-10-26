@@ -79,13 +79,11 @@ public class Main2Activity extends AppCompatActivity
         Intent i = getIntent();
 
         Bundle extras = i.getExtras();
-
-
-
         if (extras != null) {
             String accion  = extras.getString("accion");
 
-            if(accion == "catalogo"){
+            if(accion.equals("catalogo")){
+
                 // Set the catalogo
                 Bundle bundleF = new Bundle();
                 bundleF.putString("position", i.getExtras().getString("position") );
