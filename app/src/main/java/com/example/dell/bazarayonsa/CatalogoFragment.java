@@ -72,6 +72,8 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
 
     String carpeta;
 
+    int position;
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -111,7 +113,41 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_catalogo,
                 container, false);
 
-        carpeta = "muebles";
+
+        Intent i = getActivity().getIntent();
+
+        Bundle extras = i.getExtras();
+
+
+        if (extras != null) {
+            position  =i.getExtras().getInt("position");
+
+            switch (position){
+                case 0:
+                    carpeta = "muebles";
+                    break;
+                case 1:
+                    carpeta = "LíneaBlanca";
+                    break;
+                case 2:
+                    carpeta = "Colchones";
+                    break;
+
+            }
+
+        }
+        else{
+            carpeta = "muebles";
+        }
+
+
+
+
+
+        //llamada a extraer url de imagenes
+        new obtenerURLImages().execute();
+
+        //carpeta = "muebles";
 
         return view;
 
@@ -122,65 +158,9 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-       /*
-        //LIST START
-        product_title = getResources().getStringArray(R.array.products_titles);
-        product_price = getResources().getStringArray(R.array.products_price);
-        //product_price_oferta = getResources().getStringArray(R.array.products_price);
-        product_image = getResources().getStringArray(R.array.products_image);
-        product_save = getResources().getStringArray(R.array.products_price_save);
 
-        productimage1 = getResources().getStringArray(R.array.products_image1);
-        productimage2 = getResources().getStringArray(R.array.products_image2);
-        productimage3 = getResources().getStringArray(R.array.products_image3);
-        productgender= getResources().getStringArray(R.array.gender);
-        productdesc= getResources().getStringArray(R.array.description);
-
-        listView = (GridView)getView().findViewById(R.id.listview);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-                Toast.makeText(getContext(),"Item",Toast.LENGTH_SHORT).show();
-
-
-                Intent intent = new Intent(getActivity(), ProductDetails.class);
-                intent.putExtra("producttitle",product_title);
-                intent.putExtra("productimage",product_image);
-                intent.putExtra("position",position);
-                intent.putExtra("productprice",product_price);
-                //intent.putExtra("productpriceoferta",product_price_oferta);
-                intent.putExtra("productsave",product_save);
-
-                intent.putExtra("productimage1",productimage1);
-                intent.putExtra("productimage2",productimage2);
-                intent.putExtra("productimage3",productimage3);
-                intent.putExtra("productgender",productgender);
-                intent.putExtra("productdesc",productdesc);
-
-
-                try{
-                    startActivity(intent);
-                }
-                catch (Exception e){
-                    e.printStackTrace();
-                }
-                //startActivity(intent);
-
-            }
-
-        });
-
-
-        adapter= new ListAdapter(this,product_title,product_image,product_price,product_save);
-        listView.setAdapter(adapter);
-
-        //LIST END
-
-*/
         //llamada a extraer url de imagenes
-        new obtenerURLImages().execute();
+        //new obtenerURLImages().execute();
 
 
 

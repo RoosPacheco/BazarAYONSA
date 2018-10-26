@@ -61,7 +61,7 @@ public class Departamentos extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_catalogo,
+        View view = inflater.inflate(R.layout.fragment_departamentos,
                 container, false);
 
         //LIST START
@@ -71,13 +71,13 @@ public class Departamentos extends Fragment implements View.OnClickListener {
         listView = view.findViewById(R.id.listviewD);
 
 
-        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Toast.makeText(getContext(),"item",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(), CatalogoFragment.class);
-
+                Intent intent = new Intent(getActivity(), Main2Activity.class);
                 intent.putExtra("position",position);
+                intent.putExtra("accion","catalogo");
                 try{
                     startActivity(intent);
                 }
@@ -87,7 +87,7 @@ public class Departamentos extends Fragment implements View.OnClickListener {
 
             }
 
-        });*/
+        });
 
 
         adapter= new ListAdapter(this,depart_title,depart_image);

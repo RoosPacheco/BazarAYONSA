@@ -73,12 +73,44 @@ public class Main2Activity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Set the home as default
-        Fragment fragment = new HomeFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.content, fragment)
-                .commit();
+
+
+
+        Intent i = getIntent();
+
+        Bundle extras = i.getExtras();
+
+
+
+        if (extras != null) {
+            String accion  = extras.getString("accion");
+
+            if(accion == "catalogo"){
+                // Set the catalogo
+                Bundle bundleF = new Bundle();
+                bundleF.putString("position", i.getExtras().getString("position") );
+
+                Fragment fragment = new CatalogoFragment();
+                fragment.setArguments(bundleF);
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content, fragment)
+                        .commit();
+
+            }
+        }
+        else{
+            // Set the home as default
+            Fragment fragment = new HomeFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content, fragment)
+                    .commit();
+
+        }
+
+
     }
 
     @Override
