@@ -48,14 +48,17 @@ public class ProductDetails extends AppCompatActivity {
         product_title=i.getStringArrayExtra("producttitle");
         product_image=i.getStringArrayExtra("productimage");
         product_price=i.getStringArrayExtra("productprice");
-        product_price_ofera=i.getStringArrayExtra("productopriceoferta");
         product_save=i.getStringArrayExtra("productsave");
 
-        product_image1=i.getStringArrayExtra("productimage1");
-        product_image2=i.getStringArrayExtra("productimage2");
-        product_image3=i.getStringArrayExtra("productimage3");
-        product_gender=i.getStringArrayExtra("productgender");
+        product_image1=i.getStringArrayExtra("productimage");
+        product_image2=i.getStringArrayExtra("productimage1");
+        product_image3=i.getStringArrayExtra("productimage2");
+
         product_desc=i.getStringArrayExtra("productdesc");
+
+        Toast.makeText(getApplicationContext(), String.valueOf(position),Toast.LENGTH_SHORT).show();
+
+
 
         producttitle=(TextView)findViewById(R.id.producttitle);
         producttitle.setText(product_title[position]);
@@ -69,8 +72,6 @@ public class ProductDetails extends AppCompatActivity {
         productsave=(TextView)findViewById(R.id.productsave);
         productsave.setText(product_save[position]);
 
-        productgender=(TextView)findViewById(R.id.productgender);
-        productgender.setText(product_gender[position]);
 
         productdesc=(TextView)findViewById(R.id.productdescrip);
         productdesc.setText(product_desc[position]);

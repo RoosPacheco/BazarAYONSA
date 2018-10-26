@@ -145,9 +145,9 @@
 
     </string-array>
     <string-array name="images_departamentos">
-        <item>http://10.74.56.210/BazarAyonsa/departamentos/Antecomedorveneto4sillasestilocontemporaneo.jpg</item>
-        <item>http://10.74.56.210/BazarAyonsa/departamentos/estufadepiso_IEM_de20p_EI5020BAPS_SIL.jpg</item>
-        <item>http://10.74.56.210/BazarAyonsa/departamentos/cisiamo_cisiamo.jpg</item>
+        <item>https://bazarayonsa.000webhostapp.com/BazarAyonsa/muebles/a.jpg</item>
+        <item>https://bazarayonsa.000webhostapp.com/BazarAyonsa/colchones/3118043-1.jpg</item>
+        <item>https://bazarayonsa.000webhostapp.com/BazarAyonsa/colchones/3118043-1.jpg</item>
     </string-array>
     <string-array name="nombres_departamentos">
         <item>Muebles y hogar</item>

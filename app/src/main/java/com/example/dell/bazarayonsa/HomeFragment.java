@@ -34,7 +34,9 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
-    String ip = "10.74.16.147";
+    //String ip = "192.168.1.91";
+
+    String host = "https://bazarayonsa.000webhostapp.com";
 
     ListView listView;
     // TODO: Rename parameter arguments, choose names that match
@@ -100,6 +102,8 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         listView = (ListView)view.findViewById(R.id.lista);
+
+        Log.d("crear","crear");
         new CargarPromociones().execute();
 
 
@@ -139,7 +143,7 @@ public class HomeFragment extends Fragment {
             HttpURLConnection connection;
 
             //example.php es el php que envia el arreglo json
-            String direccion = "http://"+ip+"/BazarAyonsa/promociones/example.php";
+            String direccion = host+"/BazarAyonsa/promociones/example.php";
 
             List<String> list = new ArrayList<String>();
 
@@ -160,7 +164,7 @@ public class HomeFragment extends Fragment {
                 JSONArray arr = new JSONArray(res);
 
                 for(int i = 0; i < arr.length(); i++){
-                    list.add("http://"+ip+"/BazarAyonsa/promociones/"+arr.getString(i));
+                    list.add(host+"/BazarAyonsa/promociones/"+arr.getString(i));
                     Log.d("IMAGENES"+i, arr.getString(i));
                 }
 

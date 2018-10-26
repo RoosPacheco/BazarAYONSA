@@ -125,7 +125,7 @@ public class Main2Activity extends AppCompatActivity
             fragment = new HomeFragment();
         } else if (id == R.id.nav_catalogo) {
 
-            fragment = new CatalogoFragment();
+            fragment = new Departamentos();
 
         } else if (id == R.id.nav_home) {
             fragment = new CatalogoFragment();
