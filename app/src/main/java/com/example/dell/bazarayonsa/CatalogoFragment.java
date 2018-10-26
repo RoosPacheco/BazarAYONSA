@@ -113,13 +113,15 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_catalogo,
                 container, false);
 
-
         Intent i = getActivity().getIntent();
 
         Bundle extras = i.getExtras();
 
 
+
         if (extras != null) {
+
+
             position  =i.getExtras().getInt("position");
 
             switch (position){
@@ -127,10 +129,16 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
                     carpeta = "muebles";
                     break;
                 case 1:
-                    carpeta = "LíneaBlanca";
+                    carpeta = "linea_blanca";
                     break;
                 case 2:
                     carpeta = "Colchones";
+                    break;
+                case 3:
+                    carpeta = "minisplits";
+                    break;
+                case 4:
+                    carpeta = "Entretenimiento";
                     break;
 
             }
@@ -412,7 +420,6 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 
-                    Toast.makeText(getContext(),"item",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getActivity(), ProductDetails.class);
                     intent.putExtra("producttitle",product_title);
                     intent.putExtra("productimage",product_image);

@@ -74,7 +74,6 @@ public class Departamentos extends Fragment implements View.OnClickListener {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getContext(),"item",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), Main2Activity.class);
                 intent.putExtra("position",position);
                 intent.putExtra("accion","catalogo");
