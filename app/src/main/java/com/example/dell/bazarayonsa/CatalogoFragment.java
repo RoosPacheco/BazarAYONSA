@@ -340,10 +340,10 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
 
                 String data;
                 JSONArray arr = new JSONArray(res);
+                Log.d("longitud", String.valueOf(arr.length()));
+
                 /*************/
                 for(int i = 0; i < arr.length()-2; i++){
-
-                    Log.d("arreglo"+i, String.valueOf((arr.getJSONArray(i)).getString(2)));
 
                     for (int j = 0; j < (arr.getJSONArray(i)).length(); j++) {
                         data = (arr.getJSONArray(i)).getString(j);

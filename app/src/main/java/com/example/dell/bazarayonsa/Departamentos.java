@@ -34,7 +34,7 @@ public class Departamentos extends Fragment implements View.OnClickListener {
     /***************************************************/
 
     private GridView listView;
-    CatalogoFragment.ListAdapter adapter;
+    ListAdapter adapter;
 
     public String judul, src_asset, mp3;
     String[] depart_title,depart_image;
@@ -69,7 +69,9 @@ public class Departamentos extends Fragment implements View.OnClickListener {
         depart_image = getResources().getStringArray(R.array.images_departamentos);
 
         listView = view.findViewById(R.id.listviewD);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Toast.makeText(getContext(),"item",Toast.LENGTH_SHORT).show();
@@ -85,10 +87,10 @@ public class Departamentos extends Fragment implements View.OnClickListener {
 
             }
 
-        });
+        });*/
 
 
-        //adapter= new ListAdapter(this,depart_title,depart_image);
+        adapter= new ListAdapter(this,depart_title,depart_image);
         listView.setAdapter(adapter);
 
         //LIST END
