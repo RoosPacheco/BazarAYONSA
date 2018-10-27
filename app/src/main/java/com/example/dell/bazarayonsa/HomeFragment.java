@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -101,10 +102,26 @@ public class HomeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        listView = (ListView)view.findViewById(R.id.lista);
+        //listView = (ListView)view.findViewById(R.id.lista);
 
         Log.d("crear","crear");
-        new CargarPromociones().execute();
+
+
+
+
+        //Mostrar promociones
+        ImageView imageView2= (ImageView) view.findViewById(R.id.imageView2);
+        imageView2.setImageResource(R.drawable.home_octmuebles);
+        ImageView imageView3= (ImageView) view.findViewById(R.id.imageView3);
+        imageView3.setImageResource(R.drawable.home_lavadora);
+        ImageView imageView4= (ImageView) view.findViewById(R.id.imageView4);
+        imageView4.setImageResource(R.drawable.home_pantalla);
+        ImageView imageView5= (ImageView) view.findViewById(R.id.imageView5);
+        imageView5.setImageResource(R.drawable.home_calefactor);
+
+
+
+       // new CargarPromociones().execute();
 
 
         // Inflate the layout for this fragment

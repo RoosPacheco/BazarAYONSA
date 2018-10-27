@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
-
 public class Departamentos extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

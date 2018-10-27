@@ -56,9 +56,6 @@ public class ProductDetails extends AppCompatActivity {
 
         product_desc=i.getStringArrayExtra("productdesc");
 
-        Toast.makeText(getApplicationContext(), String.valueOf(position),Toast.LENGTH_SHORT).show();
-
-
 
         producttitle=(TextView)findViewById(R.id.producttitle);
         producttitle.setText(product_title[position]);

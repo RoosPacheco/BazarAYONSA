@@ -150,52 +150,64 @@ public class Main2Activity extends AppCompatActivity
         int id = item.getItemId();
         Fragment fragment = null;
 
-        if (id == R.id.nav_home) {
-            // Handle the camera action
-            fragment = new HomeFragment();
-        } else if (id == R.id.nav_catalogo) {
+        if (id != R.id.nav_cuenta){
+            if (id == R.id.nav_home) {
+                // Handle the camera action
+                fragment = new HomeFragment();
+            } else if (id == R.id.nav_catalogo) {
 
-            fragment = new Departamentos();
+                fragment = new Departamentos();
 
-        } else if (id == R.id.nav_home) {
-            fragment = new CatalogoFragment();
+            } else if (id == R.id.nav_home) {
+                fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_catalogo) {
-            fragment = new CatalogoFragment();
+            } else if (id == R.id.nav_catalogo) {
+                fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_promociones) {
-            fragment = new CatalogoFragment();
+            } else if (id == R.id.nav_promociones) {
+                fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_pedidos) {
-            fragment = new CatalogoFragment();
+            } else if (id == R.id.nav_pedidos) {
+                fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_regalos) {
-            fragment = new CatalogoFragment();
+            } else if (id == R.id.nav_regalos) {
+                fragment = new CatalogoFragment();
 
-        } else if (id == R.id.nav_cuenta) {
-            Intent intent = new Intent(getApplicationContext(), ActivityLoginRegister.class);
-            intent.putExtra("operación", "login");
-            startActivity(intent);
-            //Intent intent = new Intent(getApplicationContext(), MiCuenta.class);
-            //startActivity(intent);
+            }
 
-        } else if (id == R.id.nav_configuracion) {
-            Intent intent = new Intent(getApplicationContext(), Configuracion.class);
-            startActivity(intent);
+            // Insert the fragment by replacing any existing fragment
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content, fragment)
+                    .commit();
 
-        } else if (id == R.id.nav_serviciocliente) {
-            Intent intent = new Intent(getApplicationContext(), ServicioCliente.class);
-            startActivity(intent);
+
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+
         }
-        // Insert the fragment by replacing any existing fragment
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.content, fragment)
-                .commit();
+        else{
+            if (id == R.id.nav_cuenta) {
+                Intent intent = new Intent(getApplicationContext(), ActivityLoginRegister.class);
+                intent.putExtra("operación", "login");
+                startActivity(intent);
+                //Intent intent = new Intent(getApplicationContext(), MiCuenta.class);
+                //startActivity(intent);
+
+            } else if (id == R.id.nav_configuracion) {
+                Intent intent = new Intent(getApplicationContext(), Configuracion.class);
+                startActivity(intent);
+
+            } else if (id == R.id.nav_serviciocliente) {
+                Intent intent = new Intent(getApplicationContext(), ServicioCliente.class);
+                startActivity(intent);
+            }
+
+        }
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+
+
         return true;
     }
 
