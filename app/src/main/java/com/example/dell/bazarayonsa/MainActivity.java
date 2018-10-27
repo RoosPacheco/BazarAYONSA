@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ActivityLoginRegister.class);
                 intent.putExtra("operación", "crearUser");
                 startActivity(intent);
-
-
             }
         });
 
