@@ -158,11 +158,7 @@ public class Main2Activity extends AppCompatActivity
 
                 fragment = new Departamentos();
 
-            } else if (id == R.id.nav_home) {
-                fragment = new CatalogoFragment();
 
-            } else if (id == R.id.nav_catalogo) {
-                fragment = new CatalogoFragment();
 
             } else if (id == R.id.nav_promociones) {
                 fragment = new CatalogoFragment();
@@ -173,6 +169,11 @@ public class Main2Activity extends AppCompatActivity
             } else if (id == R.id.nav_regalos) {
                 fragment = new CatalogoFragment();
 
+            } else if (id == R.id.nav_configuracion) {
+                fragment = new ConfiguracionFragment();
+
+            } else if (id == R.id.nav_serviciocliente) {
+                fragment = new ServicioClienteFragment();
             }
 
             // Insert the fragment by replacing any existing fragment
@@ -194,13 +195,6 @@ public class Main2Activity extends AppCompatActivity
                 //Intent intent = new Intent(getApplicationContext(), MiCuenta.class);
                 //startActivity(intent);
 
-            } else if (id == R.id.nav_configuracion) {
-                Intent intent = new Intent(getApplicationContext(), Configuracion.class);
-                startActivity(intent);
-
-            } else if (id == R.id.nav_serviciocliente) {
-                Intent intent = new Intent(getApplicationContext(), ServicioCliente.class);
-                startActivity(intent);
             }
 
         }
