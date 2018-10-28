@@ -63,8 +63,6 @@ public class ProductDetails extends AppCompatActivity {
         productprice=(TextView)findViewById(R.id.productprice);
         productprice.setText(product_price[position]);
 
-        productprice=(TextView)findViewById(R.id.productpriceoferta);
-        productprice.setText(product_price[position]);
 
         productsave=(TextView)findViewById(R.id.productsave);
         productsave.setText(product_save[position]);
