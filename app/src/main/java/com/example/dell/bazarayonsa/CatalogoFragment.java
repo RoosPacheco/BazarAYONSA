@@ -320,8 +320,7 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
                 InputStream is = (InputStream) connection.getContent();
 
 
-                //byte [] b = new byte[100000];//buffer
-                byte [] b = new byte[10000000];//buffer
+                byte [] b = new byte[100000];//buffer
                 Integer numBytes = is.read(b);// numero de bites que leyó
                 //convertimos ese num de bites a una cadena
                 String res = new String(b, 0,  numBytes, "utf-8");
@@ -405,59 +404,54 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
         protected void onPostExecute(Wrapper list) {
             super.onPostExecute(list);
 
-            try{
+            //LIST START
+            product_title = list.titles.toArray(new String[0]);
+            product_price = list.prices.toArray(new String[0]);
+            product_image = list.urls.toArray(new String[0]);
+            product_save  = list.saves.toArray(new String[0]);
 
-                //LIST START
-                product_title = list.titles.toArray(new String[0]);
-                product_price = list.prices.toArray(new String[0]);
-                product_image = list.urls.toArray(new String[0]);
-                product_save  = list.saves.toArray(new String[0]);
+            productdesc   = list.details.toArray(new String[0]);
 
-                productdesc   = list.details.toArray(new String[0]);
+            productimage1 = list.productimageO.toArray(new String[0]);
+            productimage2 = list.productimageT.toArray(new String[0]);
 
-                productimage1 = list.productimageO.toArray(new String[0]);
-                productimage2 = list.productimageT.toArray(new String[0]);
-
-                listView = (GridView)getView().findViewById(R.id.listview);
-                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            listView = (GridView)getView().findViewById(R.id.listview);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 
-                        Intent intent = new Intent(getActivity(), ProductDetails.class);
-                        intent.putExtra("producttitle",product_title);
-                        intent.putExtra("productimage",product_image);
-                        intent.putExtra("position",position);
-                        intent.putExtra("productprice",product_price);
-                        intent.putExtra("productsave",product_save);
+                    Intent intent = new Intent(getActivity(), ProductDetails.class);
+                    intent.putExtra("producttitle",product_title);
+                    intent.putExtra("productimage",product_image);
+                    intent.putExtra("position",position);
+                    intent.putExtra("productprice",product_price);
+                    intent.putExtra("productsave",product_save);
 
-                        intent.putExtra("productimage1",productimage1);
-                        intent.putExtra("productimage2",productimage2);
+                    intent.putExtra("productimage1",productimage1);
+                    intent.putExtra("productimage2",productimage2);
 
-                        intent.putExtra("productdesc",productdesc);
+                    intent.putExtra("productdesc",productdesc);
 
+
+                    try{
                         startActivity(intent);
-
-
-                        /*try{
-                            startActivity(intent);
-                        }
-                        catch (Exception e){
-                            e.printStackTrace();
-                        }*/
-
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
                     }
 
-                });
+                }
+
+            });
 
 
-                adapter= new ListAdapter(this,product_title,product_image,product_price,product_save);
-                listView.setAdapter(adapter);
+            adapter= new ListAdapter(this,product_title,product_image,product_price,product_save);
+            listView.setAdapter(adapter);
 
-                //LIST END
-            }
-            catch (Exception e){
-                e.printStackTrace();
-            }
+            //LIST END
+
+
+
 
 
         }
