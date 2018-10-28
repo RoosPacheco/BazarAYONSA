@@ -132,13 +132,13 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
                     carpeta = "linea_blanca";
                     break;
                 case 2:
-                    carpeta = "Colchones";
+                    carpeta = "colchones";
                     break;
                 case 3:
                     carpeta = "minisplits";
                     break;
                 case 4:
-                    carpeta = "Entretenimiento";
+                    carpeta = "entretenimiento";
                     break;
 
             }
