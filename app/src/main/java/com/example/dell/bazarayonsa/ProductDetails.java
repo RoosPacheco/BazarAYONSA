@@ -86,7 +86,6 @@ public class ProductDetails extends AppCompatActivity {
                     carrito.setText(String.valueOf(cont ));
 
 
-                    Toast.makeText(getApplicationContext(),String.valueOf(cont),Toast.LENGTH_SHORT).show();
 
                 }catch (Exception e){
 
