@@ -2,6 +2,7 @@ package com.example.dell.bazarayonsa;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.ClipData;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -213,5 +214,22 @@ public class Main2Activity extends AppCompatActivity
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
 
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        Toast.makeText(getApplicationContext(),"main2",Toast.LENGTH_LONG);
+
+
+        if (requestCode == 1) {
+            if(resultCode == RESULT_OK){
+                String result=data.getStringExtra("result");
+
+                Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG);
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
     }
 }

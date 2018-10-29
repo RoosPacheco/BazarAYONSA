@@ -1,10 +1,12 @@
 package com.example.dell.bazarayonsa;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,6 +33,28 @@ public class ProductDetails extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView carrito = (TextView)findViewById(R.id.cont);
+
+
+                String valueCar = carrito.getText().toString();
+                /*Intent returnIntent = new Intent();
+                returnIntent.putExtra("result",valueCar);
+                setResult(Activity.RESULT_OK,returnIntent);
+
+                */
+
+                Intent returnIntent = getIntent();
+                returnIntent.putExtra("result",valueCar);
+                setResult(RESULT_OK,returnIntent);
+
+
+                finish();
+            }
+        });
+
 
         ImageView cart =(ImageView)findViewById(R.id.cart);
         cart.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +62,35 @@ public class ProductDetails extends AppCompatActivity {
             public void onClick(View view) {
 
                 Toast.makeText(getApplicationContext(),"Cart",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+        Button buy = (Button) findViewById(R.id.buy);
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView carrito = (TextView)findViewById(R.id.cont);
+                String valueCar = carrito.getText().toString();
+
+
+                try {
+                    if(valueCar.equals("")){
+                        valueCar = "0";
+                    }
+
+
+                    int cont = Integer.parseInt(valueCar);
+                    cont = cont + 1;
+                    carrito.setText(String.valueOf(cont ));
+
+
+                    Toast.makeText(getApplicationContext(),String.valueOf(cont),Toast.LENGTH_SHORT).show();
+
+                }catch (Exception e){
+
+                }
 
             }
         });

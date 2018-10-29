@@ -1,5 +1,6 @@
 package com.example.dell.bazarayonsa;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -33,6 +34,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+
+import static android.app.Activity.RESULT_OK;
 
 
 /**
@@ -434,7 +437,8 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
 
 
                     try{
-                        startActivity(intent);
+                        //startActivity(intent);
+                        startActivityForResult(intent, 1);
                     }
                     catch (Exception e){
                         e.printStackTrace();
@@ -456,4 +460,22 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
 
         }
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        Toast.makeText(getContext(),"catalogofragment",Toast.LENGTH_LONG);
+
+        if (requestCode == 1) {
+            if(resultCode == RESULT_OK){
+                String result=data.getStringExtra("result");
+
+                Toast.makeText(getContext(),result,Toast.LENGTH_LONG);
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
+    }//onActivityResult
+
 }
