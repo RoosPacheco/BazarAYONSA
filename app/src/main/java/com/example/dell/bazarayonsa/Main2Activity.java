@@ -23,6 +23,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SearchView;
@@ -65,6 +66,7 @@ public class Main2Activity extends AppCompatActivity
         ImageView imageView5= (ImageView) findViewById(R.id.imageView5);
         imageView5.setImageResource(R.drawable.home_calefactor);
 */
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -73,7 +75,6 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
 
 
 
@@ -96,7 +97,6 @@ public class Main2Activity extends AppCompatActivity
                 fragmentManager.beginTransaction()
                         .replace(R.id.content, fragment)
                         .commit();
-
             }
         }
         else{
@@ -106,10 +106,7 @@ public class Main2Activity extends AppCompatActivity
             fragmentManager.beginTransaction()
                     .replace(R.id.content, fragment)
                     .commit();
-
         }
-
-
     }
 
     @Override

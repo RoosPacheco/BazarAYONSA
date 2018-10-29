@@ -294,7 +294,6 @@ public class CatalogoFragment extends Fragment implements View.OnClickListener {
             ArrayList<String> prices = new ArrayList<String>();
             ArrayList<String> saves = new ArrayList<String>();
             ArrayList<String> details = new ArrayList<String>();
-
             ArrayList<String> productimage1 = new ArrayList<String>();
             ArrayList<String> productimage2 = new ArrayList<String>();
 

@@ -1,6 +1,7 @@
 package com.example.dell.bazarayonsa;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -52,6 +54,7 @@ public class HomeFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public HomeFragment() {
+
         // Required empty public constructor
     }
 
@@ -70,16 +73,20 @@ public class HomeFragment extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+
+
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -105,8 +112,6 @@ public class HomeFragment extends Fragment {
         //listView = (ListView)view.findViewById(R.id.lista);
 
         Log.d("crear","crear");
-
-
 
 
         //Mostrar promociones

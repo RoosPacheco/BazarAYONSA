@@ -47,6 +47,7 @@
         <activity android:name=".ServicioCliente" />
         <activity android:name=".Configuracion" />
         <activity android:name=".MiCuenta" />
+        <activity android:name=".bazar_legal"></activity>
     </application>
 
 </manifest>
