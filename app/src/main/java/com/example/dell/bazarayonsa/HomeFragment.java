@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -123,6 +124,28 @@ public class HomeFragment extends Fragment {
         imageView4.setImageResource(R.drawable.home_pantalla);
         ImageView imageView5= (ImageView) view.findViewById(R.id.imageView5);
         imageView5.setImageResource(R.drawable.home_calefactor);
+
+
+        Button iniciar = (Button) view.findViewById(R.id.iniciar);
+
+        iniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ActivityLoginRegister.class);
+                intent.putExtra("operación", "login");
+                startActivity(intent);
+            }
+        });
+
+        TextView crear = (TextView) view.findViewById(R.id.crear);
+        crear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ActivityLoginRegister.class);
+                intent.putExtra("operación", "crearUser");
+                startActivity(intent);
+            }
+        });
 
 
 
