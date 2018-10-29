@@ -159,13 +159,13 @@ public class Main2Activity extends AppCompatActivity
 
 
             } else if (id == R.id.nav_promociones) {
-                fragment = new CatalogoFragment();
+                fragment = new Contruccion();
 
             } else if (id == R.id.nav_pedidos) {
-                fragment = new CatalogoFragment();
+                fragment = new Contruccion();
 
             } else if (id == R.id.nav_regalos) {
-                fragment = new CatalogoFragment();
+                fragment = new Contruccion();
 
             } else if (id == R.id.nav_configuracion) {
                 fragment = new ConfiguracionFragment();
